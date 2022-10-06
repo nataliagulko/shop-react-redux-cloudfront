@@ -1,3 +1,8 @@
+# "Made in abyss" Store
+
+1. CloudFront URL: https://d3larorhb5o51k.cloudfront.net/
+1. S3 bucket URL for #1: https://made-in-abyss-store.s3.eu-west-1.amazonaws.com/index.html
+
 # React-shop-cloudfront
 
 This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:
