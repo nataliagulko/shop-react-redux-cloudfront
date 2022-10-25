@@ -8,10 +8,20 @@ export function useAvailableProducts() {
   return useQuery<AvailableProduct[], AxiosError>(
     "available-products",
     async () => {
-      const res = await axios.get<AvailableProduct[]>(
-        `${API_PATHS.bff}/product/available`
-      );
+      const res = await axios.get<AvailableProduct[]>(`${API_PATHS.bff}`);
       return res.data;
+    }
+  );
+}
+
+export function useProducts() {
+  return useQuery<AvailableProduct[], AxiosError>(
+    "available-products",
+    async () => {
+      const res = await axios.get<{ products: AvailableProduct[] }>(
+        `${API_PATHS.products}`
+      );
+      return res.data.products;
     }
   );
 }
