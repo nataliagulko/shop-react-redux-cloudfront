@@ -33,6 +33,9 @@ export default function Products() {
                 {product.title}
               </Typography>
               <Typography>{formatAsPrice(product.price)}</Typography>
+              <Typography>
+                {count > 0 ? `In stock: ${count}` : "Out of stock"}
+              </Typography>
             </CardContent>
             <CardActions>
               <AddProductToCart product={product} />
